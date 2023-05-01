@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Salary Calculator</title>
+        <meta charset="utf-8"/>
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500&display=swap" rel="stylesheet">
+        <link rel="stylesheet" type="text/css" media="screen" href="/Users/eric/Documents/assignments/weekend-salary-calculator/salary-calc.css"/>
+    </head>
+    <body class="body">
+        <header>
+            <main>
+                <section>
+                    <h1>Salary Calculator</h1>
+                </section>
+            </main>
+        </header>
+        <div id="contentDiv">
+            <h3>Add Employee</h3>
+             <form id="salary-form" onSubmit="submitSalary(event); this.reset(); return false;"> <!--https://stackoverflow.com/questions/997774/how-do-you-clear-a-plain-html-form-after-onsubmit -->
+                First Name: <input id="fNameInput" type="text"/><br/>
+                Last Name: <input id="lNameInput" type="text"/><br/>
+                ID Number: <input id="idNumInput" type="number"/><br/>
+                Title: <input id="titleInput" type="text"/><br/>
+                Annual Salary: <input id="anualSalaryInput" type="number"/><br/>
+                <input type="submit" value="Submit"/>
+            </form>
+            <h3>Employees</h3>
+            <table id="employeesTable">
+                <theadh>
+                    <tr>
+                        <th>First Name</th>
+                        <th>Last Name</th>
+                        <th>ID</th>
+                        <th>Title</th>
+                        <th>Annual Salary</th>
+                    </tr>
+                </theadh>
+                <tbody id="salaryData"></tbody>
+            </table>
+            <div>
+                <h3>Monthly total: <span id="monthlyTotal">0</span></h3>
+            </div>
+        </div>
+        <script src="/Users/eric/Documents/assignments/weekend-salary-calculator/salary-calc.js"></script>
+    </body>
+</html>
+
+<!-- 
+
+-->
